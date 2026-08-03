@@ -53,6 +53,10 @@
         animation: rise .8s cubic-bezier(.2,.8,.2,1) both;
       }
 
+      nav { position: absolute; top: 1.3rem; right: 1.6rem; display: flex; gap: .9rem; }
+      nav a { color: var(--muted); font-size: .9rem; font-weight: 700; text-decoration: none; transition: color .2s ease; }
+      nav a:hover, nav a[aria-current="page"] { color: var(--cyan); }
+
       .sparkle { color: var(--cyan); font-size: 1.35rem; }
       .eyebrow { margin: 0 0 1rem; color: var(--muted); font-size: .78rem; font-weight: 750; letter-spacing: .2em; text-transform: uppercase; }
       h1 { margin: 0; font-size: clamp(3.2rem, 10vw, 6.6rem); line-height: .91; letter-spacing: -.075em; }
@@ -88,6 +92,11 @@
   <body>
     <div class="orb one"></div><div class="orb two"></div>
     <main>
+      <nav aria-label="Main navigation">
+        <a href="welcome.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
       <div class="sparkle" aria-hidden="true">✦ ✧ ✦</div>
       <p class="eyebrow">A little corner of the internet</p>
       <h1><span>Hi.</span><span>Hello.</span><span>Welcome!</span></h1>
